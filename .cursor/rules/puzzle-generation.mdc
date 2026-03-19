@@ -1,0 +1,33 @@
+---
+description: Règles pour générer une devinette quotidienne (image + JSON)
+globs: content/puzzles/**,public/puzzles/**,docs/automation-daily-puzzle.md
+alwaysApply: false
+---
+
+# Génération devinette « célébrité / jeu de mots »
+
+## Contenu
+
+- **Pas** de contenu haineux, diffamatoire, ni d’imitation trompeuse de personnes réelles au-delà d’un jeu de mots léger (respecter le cadre légal / éthique du produit).
+- La devinette doit être un **jeu de mots** ou indice visuel **abstrait** (éviter portrait photo-réaliste reconnaissable si politique produit = pas de likeness).
+- **Langue** : indices et métadonnées en français, sauf exception documentée.
+
+## Fichiers à produire (par jour)
+
+1. **JSON** : `content/puzzles/YYYY-MM-DD.json` avec les champs :
+   - `date` : même chaîne que le nom de fichier.
+   - `imagePath` : URL statique commençant par `/puzzles/` (fichier sous `public/puzzles/`).
+   - `hint` (optionnel) : court, sans donner la réponse en clair.
+   - `answerNormalized` : texte normalisé comme `normalizeGuess` dans `src/lib/normalize-guess.ts` (minuscules, sans accents, espaces simples entre mots ; ex. `jean dujardin`).
+   - `celebrityPublicName` (optionnel) : pour notes internes / PR, pas affiché par l’app.
+
+2. **Image** : `public/puzzles/YYYY-MM-DD.svg` ou `.png` / `.webp`, référencée par `imagePath`.
+
+## Fuseau horaire
+
+- La date `YYYY-MM-DD` correspond au calendrier **Europe/Paris** (voir `src/lib/puzzle-constants.ts`).
+
+## Qualité
+
+- Vérifier que `pnpm build` passe après ajout des fichiers.
+- Ne **jamais** ajouter `answerNormalized` dans un fichier « public » séparé : il reste dans le JSON côté repo ; l’app ne l’envoie pas au client via le loader (validation via `submitGuess` uniquement).
