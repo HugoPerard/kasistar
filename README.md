@@ -1,6 +1,6 @@
 # Kasistar
 
-Application [TanStack Start](https://tanstack.com/start) : chaque jour, une **image-indice** (jeu de mots / célébrité) à deviner. Les énigmes sont des fichiers dans le dépôt (`content/puzzles/` + `public/puzzles/`). Les automations Cursor peuvent ouvrir une PR quotidienne en suivant `docs/automation-daily-puzzle.md`.
+Application [TanStack Start](https://tanstack.com/start) : chaque jour, une **image-indice** (jeu de mots / célébrité) à deviner. Les énigmes sont des fichiers dans le dépôt (`content/puzzles/` + `public/puzzles/`). Les automations Cursor peuvent ouvrir une PR quotidienne en suivant `docs/automation-daily-puzzle.md` et `docs/puzzle-generation-rules.md`.
 
 ## Fuseau horaire
 
@@ -24,12 +24,14 @@ pnpm preview
 
 ## Structure utile
 
-| Chemin | Rôle |
-|--------|------|
-| `content/puzzles/YYYY-MM-DD.json` | Métadonnées + `answerNormalized` (validation serveur) |
-| `public/puzzles/` | Images raster servies en statique (`.png`, `.webp`, `.jpg` — pas de SVG) |
-| `src/server/puzzle-fns.ts` | `getTodayPuzzlePublic`, `submitGuess` |
-| `docs/automation-daily-puzzle.md` | Checklist publication quotidienne |
+| Chemin                            | Rôle                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------ |
+| `content/puzzles/YYYY-MM-DD.json` | Métadonnées + `answerNormalized` (validation serveur)                    |
+| `public/puzzles/`                 | Images raster servies en statique (`.png`, `.webp`, `.jpg` — pas de SVG) |
+| `src/server/puzzle-fns.ts`        | `getTodayPuzzlePublic`, `submitGuess`                                    |
+| `docs/automation-daily-puzzle.md` | Checklist publication quotidienne                                        |
+| `docs/puzzle-generation-rules.md` | Règles de génération (automations Cursor)                                |
+| `docs/automation-prompt.md`      | Prompt à coller dans Cursor Automations                                  |
 
 ## Tests
 

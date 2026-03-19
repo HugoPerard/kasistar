@@ -9,13 +9,13 @@ Ce dépôt est pensé pour une **PR quotidienne** (Cursor, script local, ou huma
 
 ## Checklist
 
-1. **Créer l’image**  
-   - Chemin : `public/puzzles/YYYY-MM-DD.png` ou `.webp` / `.jpg` (**pas de SVG**).  
+1. **Créer l’image**
+   - Chemin : `public/puzzles/YYYY-MM-DD.png` ou `.webp` / `.jpg` (**pas de SVG**).
    - Taille raisonnable (éviter fichiers énormes dans Git).
 
-2. **Créer le JSON**  
-   - Chemin : `content/puzzles/YYYY-MM-DD.json`.  
-   - Remplir `date`, `imagePath` (ex. `/puzzles/YYYY-MM-DD.webp`), `answerNormalized` (voir `.cursor/rules/puzzle-generation.mdc`).  
+2. **Créer le JSON**
+   - Chemin : `content/puzzles/YYYY-MM-DD.json`.
+   - Remplir `date`, `imagePath` (ex. `/puzzles/YYYY-MM-DD.webp`), `answerNormalized` (voir `docs/puzzle-generation-rules.md`).
    - Contrôler que `answerNormalized` === résultat de la même normalisation que l’utilisateur taperait (prénom + nom, etc.).
 
 3. **Valider localement**
@@ -26,7 +26,7 @@ Ce dépôt est pensé pour une **PR quotidienne** (Cursor, script local, ou huma
    pnpm dev
    ```
 
-   - Ouvrir `/` : l’image et l’indice s’affichent.  
+   - Ouvrir `/` : l’image et l’indice s’affichent.
    - Tester une **mauvaise** puis une **bonne** réponse.
 
 4. **Commit & PR**
@@ -42,10 +42,11 @@ Ce dépôt est pensé pour une **PR quotidienne** (Cursor, script local, ou huma
 
 ## Cursor
 
-- Utiliser la règle **puzzle-generation** (fichier `.cursor/rules/puzzle-generation.mdc`) pour rappeler contraintes et champs JSON.  
-- Tu peux demander à l’agent : « Ajoute la devinette du YYYY-MM-DD selon docs/automation-daily-puzzle.md ».
+- **Règles** : Lire `docs/puzzle-generation-rules.md` pour toutes les contraintes (contenu, formats, JSON, image).
+- **IDE** : La règle `.cursor/rules/puzzle-generation.mdc` applique ces règles quand tu travailles sur les puzzles.
+- **Automations** : Prompts prêts à copier dans `docs/automation-prompt.md`.
 
 ## Notes
 
-- La réponse attendue est dans le JSON versionné : ce n’est **pas** un secret vis-à-vis de quelqu’un qui lit le dépôt ; l’app évite seulement de l’exposer dans le HTML/loader côté joueur occasionnel.  
+- La réponse attendue est dans le JSON versionné : ce n’est **pas** un secret vis-à-vis de quelqu’un qui lit le dépôt ; l’app évite seulement de l’exposer dans le HTML/loader côté joueur occasionnel.
 - Pour un vrai secret, il faudrait stockage serveur chiffré ou génération à la volée (hors scope MVP).
