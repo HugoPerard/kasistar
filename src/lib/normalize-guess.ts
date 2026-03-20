@@ -1,5 +1,5 @@
 /**
- * Normalizes user input for comparison with `answerNormalized` in puzzle JSON.
+ * Normalizes user input for comparison with entries in `answersNormalized` in puzzle JSON.
  */
 export function normalizeGuess(input: string): string {
   return input

@@ -76,13 +76,16 @@ Le jeu de mot repose sur une **modification du nom de famille** de la **personna
 
 **Traductions du patronyme (à éviter)** : ne pas se contenter de **traduire le sens** du nom (souvent anglais) vers un **mot français** — ce n’est pas le même mécanisme qu’un **homophone / quasi-homophone** sur la **prononciation** du nom tel qu’on l’entend. Le joueur francophone doit pouvoir partir du **son** du patronyme, pas d’une équivalence lexicale *pit* → *fosse*, *stone* → *pierres*.
 
+**Découpage « mot à mot » sans déformation phonétique (à éviter)** : ne pas se contenter de **recoller des mots français** qui **répètent le même son** que le patronyme **sans le transformer** en un autre mot ou quasi-homophone distinct. Si la « réponse » est seulement le patronyme **éclaté en syllabes** (ex. *Dupont* → *du pont*, même prononciation globale), le **nom de famille n’est pas modifié** au sens du jeu — **hors format**. Même logique que pour **Dujardin** → *du jardin* : le son du nom reste celui du nom d’origine, ce n’est pas une **déformation créative** du type *Lindon* → *dindon*, *Plaza* → *pizza*.
+
 **Bon exemple (homophone, pas traduction)** : **Céline Dion → Céline d’ion** — jeu sur le **son** *Dion* / *d’ion*, pas sur le sens d’un mot à traduire.
 
 **À éviter :**
 
 - Scène purement littérale sans modification du nom (ex. : Tom Cruise sur un bateau de croisière)
 - Calembour visuel sans transformation du patronyme
-- Décomposition du nom en mots existants sans vrai jeu de mot (ex. : Jean Dujardin dans un jardin — « du jardin » = sens littéral du patronyme, pas d’homophone créatif)
+- **Antoine Dupont → Antoine du pont** : *Dupont* prononcé comme *du pont* — **pas de modification phonétique du patronyme**, simple découpage — **hors format** (à mettre au même titre que les exemples ci-dessous).
+- **Jean Dujardin → Jean du jardin** : *Dujardin* = *du jardin* au son — **hors format** (même problème : le patronyme n’est pas déformé en un autre mot).
 - **Will Smith → Will Forgeron** : jeu sur le **sens** du mot anglais *smith* (forgeron) avec une « réponse » en français, sans **déformation homophone** du patronyme comme dans les bons exemples (le nom *Smith* ne devient pas un autre mot sonore en français) — **hors format**.
 - **Brad Pitt → Brad Fosse** : **traduction** du sens anglais *pit* (« fosse ») — **hors format** (pas d’homophone sur *Pitt* tel qu’on le prononce).
 - **Emma Stone → Emma Pierres** : **traduction** du sens anglais *stone* (« pierres ») — **hors format** (même problème).

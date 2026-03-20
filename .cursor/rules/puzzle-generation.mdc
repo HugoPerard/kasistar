@@ -49,11 +49,13 @@ Le jeu de mot repose sur une **modification du nom de famille** de la **personna
 
 **Traductions du patronyme (à éviter)** : ne pas remplacer le patronyme par la **traduction française du sens** (souvent depuis l’anglais) — ce n’est pas un homophone sur la **prononciation**. Voir **bons / mauvais exemples** dans `docs/puzzle-generation-rules.md` (ex. bon : **Céline Dion → Céline d’ion** ; à éviter : **Brad Fosse**, **Emma Pierres**, **Will Forgeron**).
 
+**Découpage sans déformation phonétique (à éviter)** : éviter les réponses qui **répètent le son du patronyme** sans le **transformer** en un autre mot (ex. **Dupont** → *du pont*, **Dujardin** → *du jardin*) — **hors format**. Détail : `docs/puzzle-generation-rules.md` § *Découpage « mot à mot » sans déformation phonétique*.
+
 **À éviter :**
 
 - Scène purement littérale sans modification du nom (ex. : Tom Cruise sur un bateau de croisière)
 - Calembour visuel sans transformation du patronyme
-- Décomposition du nom en mots existants sans vrai jeu de mot (ex. : Jean Dujardin dans un jardin — « du jardin » = sens littéral du patronyme, pas d'homophone créatif)
+- **Antoine Dupont → Antoine du pont** ou **Jean Dujardin → Jean du jardin** : patronyme non déformé, simple découpage — **hors format**
 - **Will Smith → Will Forgeron** : jeu sur le **sens** du mot anglais *smith* (forgeron) avec une réponse en français, sans **déformation homophone** du patronyme (le nom *Smith* ne devient pas un autre mot sonore en français) — **hors format** ; voir `docs/puzzle-generation-rules.md`.
 - **Brad Pitt → Brad Fosse** : traduction du sens *pit* — **hors format**.
 - **Emma Stone → Emma Pierres** : traduction du sens *stone* — **hors format**.
