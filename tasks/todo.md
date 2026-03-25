@@ -49,3 +49,18 @@
 ### Review
 
 - `pnpm exec tsc --noEmit`, `pnpm build`, `pnpm test` OK.
+
+## Devinette du jour (2026-03-25)
+
+- [x] Vérifier la date Europe/Paris et l'état existant des fichiers du jour
+- [x] Remplacer le placeholder 2026-03-25 par une vraie devinette cohérente et diversifiée
+- [x] Générer puis exporter une image finale 400×400 sans texte sous `public/puzzles/2026-03-25.png`
+- [x] Mettre à jour `content/puzzles/2026-03-25.json` avec la réponse normalisée correcte
+- [x] Valider avec `pnpm build`
+- [ ] Commit, push de la branche de travail, puis ouvrir une PR
+
+### Review
+
+- Date Paris confirmée : `2026-03-25`.
+- Placeholder remplacé par `Michel Sardou` → `michel sardine` avec image PNG 400×400 sous `public/puzzles/2026-03-25.png`.
+- Validation : `pnpm build` OK, `pnpm test` OK.
