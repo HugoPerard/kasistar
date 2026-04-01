@@ -20,7 +20,8 @@ Utilise ce skill quand l'utilisateur demande de "générer une devinette", "cré
 
 ### 3. Génération de l'image
 - Utilise l'outil `GenerateImage`.
-- **Prompt strict** : `Portrait ou buste : [Prénom] — RESSEMBLANCE : [Trait 1], [Trait 2], [Trait 3], [Trait 4] (voir personnalité réelle). [Scène illustrant le jeu de mots]. Style semi-réaliste : peinture digitale de portrait, éclairage réaliste, traits reconnaissables et intentionnellement proches du modèle public, pas une photographie ni un photoréalisme de studio. CRITIQUE : AUCUN texte — pas de mots, lettres, bulles, légendes, étiquettes lisibles. Visuel pur uniquement. Composition carrée, visage dominant.`
+- **Ressemblance** : **idéalement**, partir d'une **photo de référence** ou d'un flux **génération avec visage** / image-to-image lorsque l'outil le permet, pour intégrer **directement** la personnalité. **Sinon** (ou en complément), **avant le prompt** : lister **au moins 6 critères physiques distinctifs** (âge apparent, forme du visage, cheveux, barbe, yeux, sourcils, nez, teint, silhouette, etc. — pas six fois la même idée) pour une **ressemblance suffisante**, + un **bloc contexte** (métier / registre public, tenue ou accessoire de scène, ambiance de lieu). Voir `docs/puzzle-generation-rules.md` § Ressemblance et § Prompt type.
+- **Prompt strict** : `Portrait ou buste : [Prénom] — PHYSIQUE (6 minimum) : [1]…[6] (voir personnalité réelle). CONTEXTE : [métier], [tenue/accessoire iconique], [lieu/ambiance]. SCÈNE JEU DE MOTS : [illustration du nom modifié]. Style semi-réaliste, caricature expressive. CRITIQUE : AUCUN texte — pas de mots, lettres, bulles, légendes, étiquettes lisibles. Visuel pur uniquement. Visage dominant.`
 - Sauvegarde l'image source dans `assets/YYYY-MM-DD-source.png` (ou chemin équivalent dans le workspace).
 
 ### 4. Export et formatage

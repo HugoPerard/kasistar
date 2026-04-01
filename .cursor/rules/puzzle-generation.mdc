@@ -72,7 +72,7 @@ La scène illustre le **sens du nom modifié** (ex. : Michel Sardine → entour�
 
 Le joueur doit pouvoir **reconnaître qui est évoqué** : visage et style au même niveau que la scène. **Détail canonique** : `docs/puzzle-generation-rules.md` (checklist, prompt type).
 
-En résumé : lister **au moins 4 traits** visuels publics avant le prompt ; **portrait ou buste** ; intégrer ces traits **nommément** dans le prompt ; illustration stylisée mais **forte charge de ressemblance** (pas une silhouette générique).
+**Stratégie** : **idéalement** ancrer sur une **référence visuelle** (photo publique, image-to-image, génération avec visage) pour intégrer **directement** la personnalité ; **sinon** (ou en complément), lister **au moins 6 traits physiques caractéristiques** + **contexte** (métier, tenue, lieu) pour une **ressemblance suffisante**. **Portrait ou buste** ; tout **nommément** dans le prompt ; illustration stylisée, **forte charge de ressemblance** (pas une silhouette générique).
 
 ### Qualité visuelle
 
