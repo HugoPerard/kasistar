@@ -54,3 +54,5 @@ Liste de référence pour les agents et contributeurs : **toute nouvelle idée n
 | 2026-04-05 | Claire Chazal             | claire chacal                             |
 | 2026-04-06 | Anne-Sophie Lapix         | anne sophie la pique                      |
 | 2026-04-07 | Brigitte Bardot           | brigitte bar d eau                        |
+| 2026-04-10 | Yannick Noah              | yannick noel                              |
+| 2026-04-11 | Tony Parker               | tony parquet                              |

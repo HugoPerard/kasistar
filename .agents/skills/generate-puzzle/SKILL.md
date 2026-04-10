@@ -23,11 +23,12 @@ Utilise ce skill quand l'utilisateur demande de "générer une devinette", "cré
 - Utilise l'outil `GenerateImage`.
 - **Ressemblance** : **idéalement**, partir d'une **photo de référence** ou d'un flux **génération avec visage** / image-to-image lorsque l'outil le permet, pour intégrer **directement** la personnalité. **Sinon** (ou en complément), **avant le prompt** : lister **au moins 6 critères physiques distinctifs** (âge apparent, forme du visage, cheveux, barbe, yeux, sourcils, nez, teint, silhouette, etc. — pas six fois la même idée) pour une **ressemblance suffisante**, + un **bloc contexte** (métier / registre public, tenue ou accessoire de scène, ambiance de lieu). Voir `docs/puzzle-generation-rules.md` § Ressemblance et § Prompt type.
 - **Prompt strict** : `Portrait ou buste : [Prénom] — PHYSIQUE (6 minimum) : [1]…[6] (voir personnalité réelle). CONTEXTE : [métier], [tenue/accessoire iconique], [lieu/ambiance]. SCÈNE JEU DE MOTS : [illustration du nom modifié]. Style semi-réaliste, caricature expressive. CRITIQUE : AUCUN texte — pas de mots, lettres, bulles, légendes, étiquettes lisibles. Visuel pur uniquement. Visage dominant.`
-- Sauvegarde l'image source dans `assets/YYYY-MM-DD-source.png` (ou chemin équivalent dans le workspace).
+- Fichier **brut / source** (avant export 400×400) : chemin **temporaire** ou sous `assets/` **uniquement** le temps du flux. **Ne pas** versionner les références téléchargées ni les brouillons. Détail : `docs/puzzle-generation-rules.md` § *Sources, références et fichiers intermédiaires*.
 
 ### 4. Export et formatage
 - Exécute le script d'export : `pnpm puzzle:export -- <fichier_source.png> public/puzzles/YYYY-MM-DD.png`
 - Vérifie que l'image fait bien 400x400 avec `magick identify`.
+- **Après** export et validation : **supprimer** le fichier source intermédiaire et toute copie locale de **référence** (photos, captures) ; **ne pas** ajouter d’artefacts de sourcing au dépôt.
 - Crée le fichier `content/puzzles/YYYY-MM-DD.json` avec :
   - `date`: "YYYY-MM-DD"
   - `imagePath`: "/puzzles/YYYY-MM-DD.png"
@@ -36,4 +37,5 @@ Utilise ce skill quand l'utilisateur demande de "générer une devinette", "cré
 
 ### 5. Vérification
 - Lance `pnpm build && pnpm test` pour t'assurer que tout compile et que le JSON est valide.
+- Avant tout commit : `git status` — **aucun** fichier de source, brouillon ou référence ne doit être stagé (seulement `content/puzzles/`, `public/puzzles/`, `docs/devinettes-deja-publiees.md` si mis à jour).
 - Confirme à l'utilisateur que tout est prêt.
