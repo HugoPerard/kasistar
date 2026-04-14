@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ArchivesRouteImport } from './routes/archives'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as StarIndexRouteImport } from './routes/star/index'
+import { Route as StarArchivesRouteImport } from './routes/star/archives'
 
 const ArchivesRoute = ArchivesRouteImport.update({
   id: '/archives',
@@ -22,31 +24,49 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StarIndexRoute = StarIndexRouteImport.update({
+  id: '/star/',
+  path: '/star/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StarArchivesRoute = StarArchivesRouteImport.update({
+  id: '/star/archives',
+  path: '/star/archives',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/archives': typeof ArchivesRoute
+  '/star/archives': typeof StarArchivesRoute
+  '/star/': typeof StarIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/archives': typeof ArchivesRoute
+  '/star/archives': typeof StarArchivesRoute
+  '/star': typeof StarIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/archives': typeof ArchivesRoute
+  '/star/archives': typeof StarArchivesRoute
+  '/star/': typeof StarIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/archives'
+  fullPaths: '/' | '/archives' | '/star/archives' | '/star/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/archives'
-  id: '__root__' | '/' | '/archives'
+  to: '/' | '/archives' | '/star/archives' | '/star'
+  id: '__root__' | '/' | '/archives' | '/star/archives' | '/star/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchivesRoute: typeof ArchivesRoute
+  StarArchivesRoute: typeof StarArchivesRoute
+  StarIndexRoute: typeof StarIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +85,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/star/': {
+      id: '/star/'
+      path: '/star'
+      fullPath: '/star/'
+      preLoaderRoute: typeof StarIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/star/archives': {
+      id: '/star/archives'
+      path: '/star/archives'
+      fullPath: '/star/archives'
+      preLoaderRoute: typeof StarArchivesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchivesRoute: ArchivesRoute,
+  StarArchivesRoute: StarArchivesRoute,
+  StarIndexRoute: StarIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

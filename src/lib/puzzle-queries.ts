@@ -1,24 +1,25 @@
-import { queryOptions } from "@tanstack/react-query";
+import { queryOptions } from '@tanstack/react-query'
+import { type GameId } from '#/lib/game-config'
 import {
   getTodayPuzzlePublic,
   getPuzzleByDate,
   listAvailableDates,
-} from "#/server/puzzle-fns";
+} from '#/server/puzzle-fns'
 
-export const todayPuzzleQueryOptions = () =>
+export const todayPuzzleQueryOptions = (gameId: GameId) =>
   queryOptions({
-    queryKey: ["puzzle", "today"] as const,
-    queryFn: () => getTodayPuzzlePublic(),
-  });
+    queryKey: ['dailyGame', gameId, 'today'] as const,
+    queryFn: () => getTodayPuzzlePublic({ data: { gameId } }),
+  })
 
-export const puzzleByDateQueryOptions = (date: string) =>
+export const puzzleByDateQueryOptions = (gameId: GameId, date: string) =>
   queryOptions({
-    queryKey: ["puzzle", date] as const,
-    queryFn: () => getPuzzleByDate({ data: { date } }),
-  });
+    queryKey: ['dailyGame', gameId, 'date', date] as const,
+    queryFn: () => getPuzzleByDate({ data: { gameId, date } }),
+  })
 
-export const availableDatesQueryOptions = () =>
+export const availableDatesQueryOptions = (gameId: GameId) =>
   queryOptions({
-    queryKey: ["puzzle", "dates"] as const,
-    queryFn: () => listAvailableDates(),
-  });
+    queryKey: ['dailyGame', gameId, 'dates'] as const,
+    queryFn: () => listAvailableDates({ data: { gameId } }),
+  })
