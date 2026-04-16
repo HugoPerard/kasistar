@@ -14,7 +14,7 @@ Utilise ce skill quand l'utilisateur demande de "générer une devinette", "cré
 
 ### 2. Idéation (Brainstorming)
 - Propose 3 à 5 idées de personnalités publiques connues (acteurs, sportifs, journalistes, animateurs, chanteurs, politiques, etc.).
-- **Règle d'or du jeu de mots** : Il doit reposer sur le **SON** (homophone ou quasi-homophone) du nom de famille en français.
+- **Règle d'or du jeu de mots** : le patronyme doit **muter** en **un autre mot** (lexème distinct), pas seulement se **réécrire** en français avec le **même son** qu’à l’oral (ex. **Chris Rock → Chris Roc** : *rock* / *roc* homophones — **interdit**, voir `docs/puzzle-generation-rules.md` § *Homophonie sans mutation du patronyme*). Viser des déformations du type *Lindon* → *dindon*, *Cruz* → *croute*, *Huppert* → *hyper*.
 - **INTERDIT** : Ne traduis JAMAIS le sens d'un nom anglais en français (ex: Brad Pitt -> Brad Fosse est INTERDIT).
 - Pour chaque idée, décris brièvement la scène visuelle et la réponse attendue.
 - Présente ces idées à l'utilisateur et **attends sa validation** avant de générer l'image (sauf si l'utilisateur t'a donné carte blanche totale).

@@ -60,3 +60,5 @@ Liste de référence pour les agents et contributeurs : **toute nouvelle idée n
 | 2026-04-13 | Eddy Mitchell             | eddy michelin                             |
 | 2026-04-14 | Madonna                   | madonna madonne                           |
 | 2026-04-15 | Freddie Mercury           | freddie mercure                           |
+| 2026-04-16 | Penélope Cruz             | penelope croute                           |
+| 2026-04-17 | Bill Murray               | bill mure                                 |

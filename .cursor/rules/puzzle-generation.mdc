@@ -53,6 +53,8 @@ Le jeu de mot repose sur une **modification du nom de famille** de la **personna
 
 **Découpage sans déformation phonétique (à éviter)** : éviter les réponses qui **répètent le son du patronyme** sans le **transformer** en un autre mot (ex. **Dupont** → *du pont*, **Dujardin** → *du jardin*) — **hors format**. Même logique pour **resegmentations** type **Lamy** → *la mie* (article + mot, pas mutation du patronyme). Éviter les **collages** sur patronymes étrangers **sans chute** (ex. **Chris prête** pour *Pratt* : pas d’expression identifiable). Détail : `docs/puzzle-generation-rules.md` § *Découpage*, *Resegmentations*, *Quasi-homonyme collage sans chute*.
 
+**Homophonie sans mutation (à éviter)** : si le nom de famille dans la réponse **se prononce comme** le patronyme réel (ex. **Rock** / **roc**) et ne change **qu’à l’orthographe**, **hors format**. Le patronyme doit muter en **autre lexème** (type *Lindon* → *dindon*, *Huppert* → *hyper*). Voir § *Homophonie sans mutation du patronyme* dans `docs/puzzle-generation-rules.md`.
+
 **À éviter :**
 
 - Scène purement littérale sans modification du nom (ex. : Tom Cruise sur un bateau de croisière)
@@ -63,6 +65,7 @@ Le jeu de mot repose sur une **modification du nom de famille** de la **personna
 - **Emma Stone → Emma Pierres** : traduction du sens *stone* — **hors format**.
 - **Alexandra Lamy → Alexandra la mie** : resegmentation *la + mie*, **pas** une déformation phonétique du patronyme — **hors format** (comme Dupont / Dujardin).
 - **Chris Pratt → Chris prête** : quasi-homonyme **sans chute** ; la réponse ne forme **pas** une expression ou image stable — **hors format**.
+- **Chris Rock → Chris Roc** : **homophonie sans mutation** (même son pour le patronyme) — **hors format**.
 
 ### Aucun texte
 
