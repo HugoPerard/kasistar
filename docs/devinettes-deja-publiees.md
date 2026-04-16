@@ -62,3 +62,5 @@ Liste de référence pour les agents et contributeurs : **toute nouvelle idée n
 | 2026-04-15 | Freddie Mercury           | freddie mercure                           |
 | 2026-04-16 | Penélope Cruz             | penelope croute                           |
 | 2026-04-17 | Bill Murray               | bill mure                                 |
+| 2026-04-18 | Thomas Pesquet            | thomas pasquier                           |
+| 2026-04-19 | Daniel Craig              | daniel craie                              |
