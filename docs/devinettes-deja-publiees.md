@@ -64,3 +64,5 @@ Liste de référence pour les agents et contributeurs : **toute nouvelle idée n
 | 2026-04-17 | Bill Murray               | bill mure                                 |
 | 2026-04-18 | Thomas Pesquet            | thomas pasquier                           |
 | 2026-04-19 | Daniel Craig              | daniel craie                              |
+| 2026-04-20 | Jean-Jacques Goldman      | jean jacques golfman                      |
+| 2026-04-21 | Michel Drucker            | michel trucker                            |
