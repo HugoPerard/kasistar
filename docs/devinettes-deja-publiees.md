@@ -66,3 +66,5 @@ Liste de référence pour les agents et contributeurs : **toute nouvelle idée n
 | 2026-04-19 | Daniel Craig              | daniel craie                              |
 | 2026-04-20 | Jean-Jacques Goldman      | jean jacques golfman                      |
 | 2026-04-21 | Michel Drucker            | michel trucker                            |
+| 2026-04-22 | Sean Connery              | sean connerie                             |
+| 2026-04-23 | Julia Roberts             | julia robot                               |
